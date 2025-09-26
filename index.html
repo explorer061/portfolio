@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swathy • Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .about-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px 40px 20px;
+      text-align: center;
+    }
+    .about-section h1 {
+      font-size: 3em;
+      margin-bottom: 28px;
+    }
+    .avatar-svg {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid #ddd;
+      margin-bottom: 26px;
+      background: linear-gradient(120deg, #ff69b4 60%, #ffd6e7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(255, 105, 180, 0.12);
+    }
+    .avatar-svg svg {
+      width: 80px;
+      height: 80px;
+      display: block;
+      margin: auto;
+    }
+    .about-text {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1.15em;
+    }
+    .about-text p {
+      margin-bottom: 18px;
+    }
+    .section-title {
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      font-weight: 600;
+      text-align: center;
+    }
+    /* Projects */
+    .card-project {
+      border: none;
+      box-shadow: 0 8px 24px rgba(255, 105, 180, 0.08);
+      border-radius: 16px;
+      transition: transform 0.17s;
+      background: linear-gradient(120deg, #faf0f6 70%, #fff 100%);
+    }
+    .card-project:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+    .project-icon {
+      font-size: 2.5em;
+      color: #ff69b4;
+      margin-bottom: 16px;
+    }
+    /* Skills */
+    .card-skill {
+      border: none;
+      background: linear-gradient(120deg, #fff 60%, #ffe0ef 100%);
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.08);
+      border-radius: 16px;
+      transition: transform 0.13s;
+    }
+    .card-skill:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 24px rgba(255, 105, 180, 0.13);
+    }
+    .skill-icon {
+      font-size: 2.2em;
+      color: #ff69b4;
+      margin-top: 18px;
+      margin-bottom: 12px;
+    }
+    .btn-pink {
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.12);
+    }
+    .btn-pink:hover {
+      background-color: #ff85c1;
+      color: #fff;
+    }
+    .btn-pink i {
+      filter: brightness(0) invert(1);
+    }
+    .contact-section {
+      background: linear-gradient(120deg, #ff69b4 60%, #ffd6e7 100%);
+      color: #fff;
+      padding: 48px 0;
+    }
+    .contact-info i {
+      font-size: 1.5em;
+      margin-right: 10px;
+      color: #fff;
+      vertical-align: middle;
+    }
+    .social-icons .btn {
+      margin: 0 8px;
+      font-size: 1.4em;
+      padding: 0.6em 0.7em;
+      border-radius: 50%;
+      background: #fff;
+      color: #ff69b4;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.11);
+      border: none;
+    }
+    .social-icons .btn:hover {
+      background: #ff85c1;
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .about-section h1 { font-size: 2em; }
+      .avatar-svg { width: 110px; height: 110px; }
+      .about-text { font-size: 1em; }
+      .section-title { font-size: 1.3em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- About Section -->
+  <section class="about-section">
+    <h1>About</h1>
+    <div class="avatar-svg">
+      <!-- Abstract SVG avatar (no image dependency) -->
+      <svg viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="35" fill="#fff"/>
+        <ellipse cx="40" cy="35" rx="19" ry="18" fill="#ffd6e7"/>
+        <ellipse cx="40" cy="67" rx="25" ry="12" fill="#ff69b4"/>
+        <circle cx="40" cy="38" r="13" fill="#fff"/>
+        <ellipse cx="34" cy="36" rx="2.5" ry="2.5" fill="#333"/>
+        <ellipse cx="46" cy="36" rx="2.5" ry="2.5" fill="#333"/>
+        <path d="M37 44 Q40 47 43 44" stroke="#333" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <div class="about-text">
+      <p>Hello! I'm Swathy, a passionate professional who enjoys creating thoughtful, user-centered projects. I love turning ideas into meaningful solutions through collaboration and creativity.</p>
+      <p>Whether it's solving design challenges or diving into new technologies, I'm always eager to grow and contribute. Thanks for stopping by my portfolio!</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="section-title mb-5">Projects</div>
+      <div class="row justify-content-center g-4">
+        <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-project h-100 p-3">
+            <div class="project-icon text-center"><i class="bi bi-bar-chart-line-fill"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Shop Ease Sales Insights</h5>
+              <p class="card-text">Key insights from Shop Ease’s sales data—focused on improving sales performance and customer satisfaction by identifying trends, best-selling products, customer behavior, and potential improvement areas.</p>
+              <div class="mt-auto text-end">
+                <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-project h-100 p-3">
+            <div class="project-icon text-center"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Business Analytics Platform</h5>
+              <p class="card-text">Applying advanced analytics—predictive modelling, statistical analysis, and machine learning—to derive actionable business insights, forecasts, and strategic decision support.</p>
+              <div class="mt-auto text-end">
+                <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-project h-100 p-3">
+            <div class="project-icon text-center"><i class="bi bi-cpu-fill"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">AI Data Solutions</h5>
+              <p class="card-text">AI-driven techniques for data cleaning, visualization, predictive modelling, and business strategy development, transforming raw data into actionable solutions.</p>
+              <div class="mt-auto text-end">
+                <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-title mb-5">Skills</div>
+      <div class="row justify-content-center g-4">
+        <!-- Skill 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-skill h-100 text-center p-3">
+            <div class="skill-icon"><i class="bi bi-filetype-py"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Expert in Python for data analysis, automation, and AI/ML solutions. Focused on clean, efficient, and scalable code.</p>
+              <a href="https://www.coursera.org/specializations/python" target="_blank" class="mt-auto btn btn-outline-primary btn-sm">Certificate</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-skill h-100 text-center p-3">
+            <div class="skill-icon"><i class="bi bi-pie-chart-fill"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Data Visualization</h5>
+              <p class="card-text">Skilled in creating compelling visualizations using tools like Tableau, PowerBI, and Python libraries (Matplotlib, Seaborn, Plotly).</p>
+              <a href="https://www.coursera.org/specializations/data-visualization" target="_blank" class="mt-auto btn btn-outline-primary btn-sm">Certificate</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-skill h-100 text-center p-3">
+            <div class="skill-icon"><i class="bi bi-database-fill-gear"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">SQL</h5>
+              <p class="card-text">Proficient in SQL for querying, managing, and analyzing relational databases—optimizing business intelligence workflows.</p>
+              <a href="https://www.coursera.org/specializations/sql-for-data-science" target="_blank" class="mt-auto btn btn-outline-primary btn-sm">Certificate</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-skill h-100 text-center p-3">
+            <div class="skill-icon"><i class="bi bi-chat-left-text-fill"></i></div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Data Storytelling</h5>
+              <p class="card-text">Able to translate complex data into actionable insights and clear narratives for diverse audiences.</p>
+              <a href="https://www.coursera.org/learn/data-storytelling" target="_blank" class="mt-auto btn btn-outline-primary btn-sm">Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section class="contact-section">
+    <div class="container text-center">
+      <div class="section-title mb-4 text-white">Contact Me</div>
+      <div class="row justify-content-center mb-4 contact-info">
+        <div class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-3 mb-md-0">
+          <i class="bi bi-envelope-fill"></i>
+          <span>swathy061@gmail.com</span>
+        </div>
+        <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+44 07721754156</span>
+        </div>
+      </div>
+      <div class="social-icons d-flex justify-content-center gap-3 flex-wrap">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/swathy061" target="_blank" class="btn btn-pink" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/explorer061" target="_blank" class="btn btn-pink" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
