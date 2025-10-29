@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swathy • Portfolio (Dark Fixed About)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --panel:#0f1113;
+      --muted:#bfbfc4;
+      --accent:#ff69b4;
+      --card-glow: 0 10px 30px rgba(255,105,180,0.12);
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: #e6e6e6;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .left-panel {
+      width: 35%;
+      min-width: 280px;
+      background: var(--panel);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      box-shadow: 6px 0 20px rgba(0,0,0,0.4);
+      z-index: 10;
+    }
+    .left-panel h1{color:white; margin-bottom: 20px;}
+    .avatar-wrapper{
+      width:150px; height:150px; border-radius:50%; overflow:hidden;
+      border:4px solid rgba(255,255,255,0.06);
+      box-shadow: var(--card-glow);
+      margin-bottom: 20px;
+    }
+    .avatar-wrapper img{width:100%; height:100%; object-fit:cover;}
+    .about-text{color:var(--muted); font-size:1em; line-height:1.5; text-align:center;}
+
+    .right-content{
+      margin-left:35%;
+      width:65%;
+      overflow-y:auto;
+      height:100vh;
+      scroll-behavior:smooth;
+      padding:40px 20px;
+    }
+
+    .section-title { font-size:2em; margin-bottom:20px; font-weight:600; color:#fff; text-align:center; }
+
+    .card-project, .card-skill{
+      border:none; border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+    .card-project:hover, .card-skill:hover{ transform:translateY(-6px) scale(1.02); box-shadow:0 18px 50px rgba(255,105,180,0.12),0 6px 18px rgba(0,0,0,0.6);} 
+    .project-icon, .skill-icon{ font-size:2em; color:var(--accent); margin-bottom:12px; }
+
+    .btn-pink{ background-color: var(--accent); color:#fff; border:none; box-shadow: 0 6px 20px rgba(255,105,180,0.12); }
+
+    .contact-section{ background: linear-gradient(120deg, rgba(255,105,180,0.12), rgba(255,214,233,0.04)); color:#fff; padding:42px 0; }
+
+    @media (max-width:768px){
+      body{flex-direction:column;}
+      .left-panel{position:relative; width:100%; height:auto; box-shadow:none;}
+      .right-content{margin-left:0; width:100%; height:auto;}
+    }
+  </style>
+</head>
+<body>
+  <div class="left-panel">
+    <h1>About</h1>
+    <div class="avatar-wrapper"><img src="image.jpg" alt="Swathy"></div>
+    <div class="about-text">
+      <p>Hello! I'm Swathy, a passionate professional who enjoys creating thoughtful, user-centered projects. I love turning ideas into meaningful solutions through collaboration and creativity.</p>
+      <p>Whether it's solving design challenges or diving into new technologies, I'm always eager to grow and contribute. Thanks for stopping by my portfolio!</p>
+    </div>
+  </div>
+
+  <div class="right-content">
+    <section class="py-5">
+      <div class="container">
+        <div class="section-title mb-4">Projects</div>
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card card-project h-100 p-3">
+              <div class="project-icon text-center"><i class="bi bi-bar-chart-line-fill"></i></div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-white">Shop Ease Sales Insights</h5>
+                <p class="card-text">Key insights from Shop Ease’s sales data—focused on improving sales performance and customer satisfaction by identifying trends and potential improvement areas.</p>
+                <div class="mt-auto text-end"><a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card card-project h-100 p-3">
+              <div class="project-icon text-center"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-white">Business Analytics Platform</h5>
+                <p class="card-text">Applying advanced analytics—predictive modelling and machine learning—to derive actionable business insights and strategic decision support.</p>
+                <div class="mt-auto text-end"><a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="section-title mb-4">Skills</div>
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-skill h-100 text-center p-3">
+              <div class="skill-icon"><i class="bi bi-filetype-py"></i></div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-white">Python</h5>
+                <p class="card-text">Expert in Python for data analysis, automation, and AI/ML solutions.</p>
+                <a href="https://www.coursera.org/specializations/python" target="_blank" class="mt-auto btn btn-outline-primary btn-sm">Certificate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container text-center">
+        <div class="section-title mb-4 text-white">Contact Me</div>
+        <div class="row justify-content-center mb-4 contact-info">
+          <div class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-3 mb-md-0">
+            <i class="bi bi-envelope-fill"></i><span>swathy061@gmail.com</span>
+          </div>
+          <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+            <i class="bi bi-telephone-fill"></i><span>+44 07721754156</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
